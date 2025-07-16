@@ -8,7 +8,7 @@ This project is a deep learning-based image classification application developed
 
 With the rapid advancement of artificial intelligence and deep learning technologies, detecting fake face images has become a significant challenge. These images can be maliciously used in identity fraud, misinformation, and deepfake generation.
 
-The goal of this project is to evaluate the performance of various **lightweight CNN architectures** in classifying real and fake face images using two distinct datasets:
+The goal of this project is to evaluate the performance of various lightweight CNN architectures in classifying real and fake face images using two distinct datasets:
 
 - A relatively **easy** dataset with less complex fake samples.
 - A **hard** dataset containing highly realistic fake faces that are difficult to distinguish, even for the human eye.
@@ -60,13 +60,13 @@ Both datasets were split into:
 
 3. **Model Training**:
    - Multiple CNN architectures were trained separately on both datasets.
-   - Training conducted using PyTorch/TensorFlow (choose one based on your actual implementation).
+   - Training conducted using PyTorch/TensorFlow 
 
 4. **Evaluation Metrics**:
    - Accuracy
    - Confusion Matrix
-   - Precision, Recall, F1 Score
-   - ROC-AUC Score (if applied)
+   - Validation Loss
+   - Precision / Recall / F1 
 
 ---
 
@@ -74,21 +74,9 @@ Both datasets were split into:
 
 Below is a comparison table of the accuracy scores obtained for each model across both datasets:
 
-| Model             | RVF10K Accuracy | Hard Fake Accuracy |
-|------------------|------------------|---------------------|
-| ShuffleNet        |      XX.X%       |        XX.X%        |
-| SqueezeNet        |      XX.X%       |        XX.X%        |
-| MobileNet Small   |      XX.X%       |        XX.X%        |
-| MobileNet Large   |      XX.X%       |        XX.X%        |
-| ResNet            |      XX.X%       |        XX.X%        |
-| AlexNet           |      XX.X%       |        XX.X%        |
-| VGG19             |      XX.X%       |        XX.X%        |
-| Custom CNN Model  |      XX.X%       |        XX.X%        |
-
-
 ---
 
-### 🧪 Dataset: Hard Fake vs Real Faces (StyleGAN2)
+### 🧪 Dataset 1: Hard Fake vs Real Faces (StyleGAN2)
 
 | Model              | Best Epoch | Train Accuracy | Val Accuracy | Train Loss | Val Loss | Optimizer | LR     | Notes                            |
 |-------------------|------------|----------------|--------------|------------|----------|-----------|--------|----------------------------------|
@@ -99,9 +87,9 @@ Below is a comparison table of the accuracy scores obtained for each model acros
 
 ---
 
-### 🧪 Dataset: Real-vs-Fake (RVF10K) – SqueezeNet Experiments
+### 🧪 Dataset 2: Real-vs-Fake Faces (RVF10K) – SqueezeNet  Trials
 
-| Experiment | Epoch | Optimizer | LR     | Train Acc | Val Acc | Train Loss | Val Loss | Notes |
+|  Trials    | Epoch | Optimizer | LR     | Train Acc | Val Acc | Train Loss | Val Loss | Notes |
 |------------|-------|-----------|--------|-----------|---------|------------|----------|-------|
 | #1         | 9/20  | SGD       | 0.001  | 0.7427    | 0.6055  | 0.5095     | 0.7628   | augmentation used |
 | #2         | 20/20 | SGD       | 0.0001 | 0.7277    | 0.5898  | 0.5439     | 0.7399   | Complex augmentation |
@@ -156,3 +144,5 @@ This project was developed in collaboration with:
 - 👩‍💻 [@beyzakutuk](https://github.com/beyzakutuk) 
 - 👩‍💻 [@RanaBetulKaya](https://github.com/RanaBetulKaya)
 - 👩‍💻 [@edakorkusuz](https://github.com/edakorkusuz)
+
+Special thanks to my teammates for their contributions in data preparation, experimentation, and evaluation phases.
